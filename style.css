@@ -1,36 +1,43 @@
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
+ 
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: sans-serif;
+      background: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 150px); /* Висота кожного елемента */
-  gap: 3px;
-  width: 680px; /* Ширина контейнера */
-}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 120px);
+      grid-template-rows: repeat(3, 120px);
+      gap: 15px;
+    }
 
-.item {
-  background-color: #87ceeb;
-  border: 1px solid #ccc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-weight: bold;
-}
+    .item {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: #333;
+      font-size: 1.2rem;
+      transition: transform 0.2s;
+    }
 
-.item1 { width: 200px; }
-.item2 { width: 180px; }
-.item3 { width: 160px; }
-.item4 { width: 200px; }
-.item5 { width: 180px; }
-.item6 { width: 160px; }
-.item7 { width: 200px; }
-.item8 { width: 180px; }
-.item9 { width: 160px; }
+    .item:hover {
+      transform: scale(1.05);
+      background-color: #d8eefe;
+    }
+
+    /* Спеціальне розташування для елемента 7 */
+    .item7 {
+      grid-column: 2 / 3; /* Середня колонка */
+      grid-row: 3 / 4;     /* Третій рядок */
+    }
+ 
